@@ -29,6 +29,18 @@ const handleUserInput = function (key) {
     connection.write("Move: right");
   }
 
+  if (key === 'j') {
+    connection.write("Say: nyaa~");
+  }
+
+  if (key === 'k') {
+    connection.write("Say: meow~");
+  }
+
+  if (key === 'l') {
+    connection.write("Say: purr");
+  }
+
   if (key === '\u0003') {
     process.exit();
   };
