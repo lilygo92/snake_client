@@ -1,3 +1,5 @@
+const {MOVE_UP_KEY , MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGE1, MESSAGE2, MESSAGE3} = require("./constants");
+
 let connection;
 
 const setupInput = function (conn) {
@@ -14,31 +16,31 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (key) {
   if (key === 'w') {
-    connection.write("Move: up");
+    connection.write(MOVE_UP_KEY);
   }
 
   if (key === 'a') {
-    connection.write("Move: left");
+    connection.write(MOVE_LEFT_KEY);
   }
 
   if (key === 's') {
-    connection.write("Move: down");
+    connection.write(MOVE_DOWN_KEY);
   }
 
   if (key === 'd') {
-    connection.write("Move: right");
+    connection.write(MOVE_RIGHT_KEY);
   }
 
   if (key === 'j') {
-    connection.write("Say: nyaa~");
+    connection.write(MESSAGE1);
   }
 
   if (key === 'k') {
-    connection.write("Say: meow~");
+    connection.write(MESSAGE2);
   }
 
   if (key === 'l') {
-    connection.write("Say: purr");
+    connection.write(MESSAGE3);
   }
 
   if (key === '\u0003') {
